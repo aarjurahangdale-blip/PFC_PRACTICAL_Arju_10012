@@ -1,14 +1,32 @@
 #include <stdio.h>
-int main() { printf("Arju_10012");
-    int pin=1234,enter,tries=0;
-    while(tries<3) {
-        scanf("%d",&enter);
-        if(enter==pin) {
-            printf("Access Granted");
-            return 0;
+int main() {                 //PRACTICAL 06: Q.no.3:- ATM Pin Authentication//
+    int pin, attempts = 0;   //Arju rahangdale, ERP-10012//
+    const int correct_pin = 1234; 
+    while(attempts < 3) {
+        printf("Enter your 4-digit ATM PIN: ");
+        scanf("%d", &pin);
+
+        if(pin == correct_pin) {
+            printf("PIN correct. Access granted.\n");
+            break;
+        } else {
+            attempts++;
+            printf("Incorrect PIN. Attempts left: %d\n", 3 - attempts);
         }
-        tries++;
+    } 
+   if(attempts == 3) {
+        printf("Maximum attempts reached. ATM card blocked.\n");
     }
-    printf("Card Blocked");
     return 0;
-}
+} 
+//Output//
+//Enter your 4-digit ATM PIN: 2711
+//Incorrect PIN. Attempts left: 2
+//Enter your 4-digit ATM PIN: 7896
+//Incorrect PIN. Attempts left: 1
+//Enter your 4-digit ATM PIN: 7601
+//Incorrect PIN. Attempts left: 0
+//Maximum attempts reached. ATM card blocked.
+//Output//
+//Enter your 4-digit ATM PIN: 1234
+//PIN correct. Access granted.
