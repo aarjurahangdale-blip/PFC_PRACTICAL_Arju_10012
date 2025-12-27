@@ -1,6 +1,7 @@
 #include <stdio.h>
 //PRACTICAL 08:Q no.1:- Function to calculate sum of digits//
-int sumOfDigits(int n) {    //Arju rahangdale, ERP-10012//
+// Arju rahangdale ' 10012 //
+int sumOfDigits(int n) {    
     int sum = 0;
     while(n != 0) {
         sum += n % 10;  
@@ -20,3 +21,4 @@ int main() {
 //Output//
 // Enter a number: 782
 // Sum of digits of 782 = 17
+
