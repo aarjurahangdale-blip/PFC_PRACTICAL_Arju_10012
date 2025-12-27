@@ -1,35 +1,22 @@
 #include <stdio.h>
-int main() {         //PRACTICAL 07: Q.no.1:- Diamond of length 2n-1//
-    int n;           //Arju rahangdale, ERP-10012//
-    printf("Enter n: ");
+//PRACTICAL 08:Q no.1:- Function to calculate sum of digits//
+int sumOfDigits(int n) {    //Arju rahangdale, ERP-10012//
+    int sum = 0;
+    while(n != 0) {
+        sum += n % 10;  
+        n /= 10;        
+    }
+    return sum;
+}
+int main() {
+    int n;
+    printf("Enter a number: ");
     scanf("%d", &n);
-    // Upper half of diamond
-    for(int i = 1; i <= n; i++) {
-        for(int j = 1; j <= n - i; j++)
-            printf(" ");
-        for(int j = 1; j <= 2*i - 1; j++)
-            printf("*");
-        printf("\n");
-    }
-    // Lower half of diamond
-    for(int i = n-1; i >= 1; i--) {
-        for(int j = 1; j <= n - i; j++)
-            printf(" ");
-        for(int j = 1; j <= 2*i - 1; j++)
-            printf("*");
-        printf("\n");
-    }
+    int result = sumOfDigits(n);
+    printf("Sum of digits of %d = %d\n", n, result);
     return 0;
 } 
 
 //Output//
-//Enter n: 5
-//     *
-//    ***
-//   *****
-//  *******
-// *********
-//  *******
-//   *****
-//    ***
-//     *
+// Enter a number: 782
+// Sum of digits of 782 = 17
