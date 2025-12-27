@@ -1,13 +1,22 @@
 #include <stdio.h>
-void swap(int *a,int *b) {
-    int t=*a;
-    *a=*b;
-    *b=t;
+// PRACTICAL 08:Q no.2:-Function to swap two numbers using pointers //
+// Arju rahangdale , 10012
+void swap(int *a, int *b) { 
+    int temp = *a;
+    *a = *b;
+    *b = temp;
 }
-int main() { printf("Arju_10012\n");
-    int x,y;
-    scanf("%d%d",&x,&y);
-    swap(&x,&y);
-    printf("%d %d",x,y);
+int main() {
+    int x, y;
+    printf("Enter two numbers: ");
+    scanf("%d %d", &x, &y);
+    printf("Before swap: x = %d, y = %d\n", x, y);
+    swap(&x, &y);  // pass addresses
+    printf("After swap: x = %d, y = %d\n", x, y);
     return 0;
-}
+} 
+//output//
+// Enter two numbers: 2
+// 6
+// Before swap: x = 2, y = 6
+// After swap: x = 6, y = 2
