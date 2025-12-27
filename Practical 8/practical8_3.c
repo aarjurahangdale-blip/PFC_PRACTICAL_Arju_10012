@@ -1,15 +1,29 @@
 #include <stdio.h>
-void triangle(int n) {
-    int i,j;
-    for(i=1;i<=n;i++) {
-        for(j=1;j<=i;j++)
+
+//  PRACTICAL 08:Q no.3 :-  Function to print right-angle triangle //
+// Arju rahangdale ' 10012 //
+void printTriangle(int n) {     
+    for(int i = 1; i <= n; i++) {
+        for(int j = 1; j <= i; j++) {
             printf("*");
+        }
         printf("\n");
     }
 }
-int main() { printf("Arju_10012");
+int main() {
     int n;
-    scanf("%d",&n);
-    triangle(n);
+    printf("Enter the height of the triangle: ");
+    scanf("%d", &n);
+    printTriangle(n);
     return 0;
-}
+} 
+//Output//
+// Enter the height of the triangle: 8
+// *
+// **
+// ***
+// ****
+// *****
+// ******
+// *******
+// ********
