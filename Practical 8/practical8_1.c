@@ -1,15 +1,35 @@
 #include <stdio.h>
-int sumOfDigits(int n) { printf("Arju_10012");
-    int sum=0;
-    while(n>0) {
-        sum+=n%10;
-        n/=10;
+int main() {         //PRACTICAL 07: Q.no.1:- Diamond of length 2n-1//
+    int n;           //Arju rahangdale, ERP-10012//
+    printf("Enter n: ");
+    scanf("%d", &n);
+    // Upper half of diamond
+    for(int i = 1; i <= n; i++) {
+        for(int j = 1; j <= n - i; j++)
+            printf(" ");
+        for(int j = 1; j <= 2*i - 1; j++)
+            printf("*");
+        printf("\n");
     }
-    return sum;
-}
-int main() {
-    int n;
-    scanf("%d",&n);
-    printf("%d",sumOfDigits(n));
+    // Lower half of diamond
+    for(int i = n-1; i >= 1; i--) {
+        for(int j = 1; j <= n - i; j++)
+            printf(" ");
+        for(int j = 1; j <= 2*i - 1; j++)
+            printf("*");
+        printf("\n");
+    }
     return 0;
-}
+} 
+
+//Output//
+//Enter n: 5
+//     *
+//    ***
+//   *****
+//  *******
+// *********
+//  *******
+//   *****
+//    ***
+//     *
