@@ -1,5 +1,8 @@
-#include <stdio.h>
-int main() {
+// Question : Reverse an array   
+// Arju Rahangdale
+// ERP : 10012
+ # include <stdio.h>
+ int main() {
     int n, i;
     int arr[100];
 
@@ -18,3 +21,9 @@ int main() {
 
     return 0;
 }
+/* OUTPUT: Enter number of elements: 5
+Enter elements:
+10 20 30 40 50
+Reversed array:
+50 40 30 20 10  */
+
