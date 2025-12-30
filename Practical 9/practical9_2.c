@@ -1,9 +1,10 @@
+//Question : Max and min element of an array
+//Arju Rahangdale 10012
 #include <stdio.h>
-
 int main() {
     int n, i, max, min;
-    int arr[100];
-
+    int arr[100]; 
+    
     printf("Enter number of elements: ");
     scanf("%d", &n);
 
@@ -25,3 +26,8 @@ int main() {
 
     return 0;
 }
+/*OUTPUT : Enter number of elements: 6
+10 45 23 67 5 34
+Maximum = 67
+Minimum = 5                 */ 
+
